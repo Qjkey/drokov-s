@@ -93,9 +93,9 @@ header .item {
     padding-right: 15px;
 }
 header span {
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 400;
-    vertical-align: 7px;    
+    vertical-align: 8px;    
 }
 header img {
     border-radius: 15px;
@@ -206,7 +206,7 @@ p{
 .texts {
     vertical-align: 10px;
     color: var(--tg-theme-hint-color);
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 400;
 }
 .second_info .btn_grid {
