@@ -31,7 +31,7 @@
 body {
     justify-content: center;
     align-items: center;
-    background-color: var(--tg-theme-secondary-bg-color);
+    background-color: var(--tg-theme-bg-color);
     color: var(--tg-theme-text-color);
     font-family: "PS";
     /* font-size: 20px; */
@@ -160,8 +160,8 @@ p{
     align-items: center;
 }
 .second_info .form_second_info {
-    fill: var(--tg-theme-bg-color);
-    stroke: var(--tg-theme-bg-color);
+    fill: var(--tg-theme-secondary-bg-color);
+    stroke: var(--tg-theme-secondary-bg-color);
 }
 .second_info .form {
     /* position: absolute; */
@@ -175,7 +175,7 @@ p{
     width: auto; 
     text-align: center;
     align-items: center;
-    background-color: var(--tg-theme-bg-color);
+    background-color: var(--tg-theme-secondary-bg-color);
 }
 .second_info .grid {
     margin-top: 20px;
