@@ -58,7 +58,7 @@ body {
     padding: 5px 15px 0px;
     position: relative;
     display: inline-block;
-    color: var(--tg-theme-text-color);
+    color: #fff;
     text-decoration: none;
     border-radius: 100px;
     background-color: var(--tg-theme-button-color);
@@ -266,7 +266,7 @@ p{
     padding: 2px 12px 0px;
     position: relative;
     display: inline-block;
-    color: var(--tg-theme-text-color);
+    color: #fff;
     text-decoration: none;
     border-radius: 100px;
     background-color: var(--tg-theme-button-color);
@@ -312,7 +312,7 @@ p{
     padding: 2px 12px 0px;
     position: relative;
     display: inline-block;
-    color: var(--tg-theme-text-color);
+    color: #fff;
     text-decoration: none;
     border-radius: 100px;
     background-color: var(--tg-theme-destructive-text-color);
