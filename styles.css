@@ -61,7 +61,7 @@ body {
     color: #fff;
     text-decoration: none;
     border-radius: 100px;
-    background-color: var(--tg-theme-button-color);
+    background-color: var(--tg-second-button-color);
     text-align: center;
 }
 .button:active {
@@ -326,5 +326,6 @@ p{
     transition: 0.1s;
     transform: translateY(2px);
 }
+
 
 
