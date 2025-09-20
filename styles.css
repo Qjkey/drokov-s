@@ -81,7 +81,10 @@ header {
     min-width: 100px;
     grid-template-columns: auto auto 165px;
     grid-template-rows: 60px;
-    backdrop-filter: blur(60px);
+    backdrop-filter: blur(10px);
+    filter: url(#glass-distortion);
+    overflow: hidden;
+    isolation: isolate;
     border-radius: 30px;
     box-shadow: 0px 0px 20px var(--tg-theme-section-separator-color);
     margin: 0;
@@ -323,4 +326,5 @@ p{
     transition: 0.1s;
     transform: translateY(2px);
 }
+
 
