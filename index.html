@@ -86,7 +86,7 @@
         </div>
         <div id="third_info" class="sf third_info">
             <div class="img_esc"><img src="files/img/фото Скибиди габва.png" alt="ава"></div>
-            <span class="subtitle">Скибиди габв</span><br>
+            <span class="subtitle">Скибиди габв  </span><a id="openModalBtn1" class="btn">Подробнее</a><br>
             <p class="texts">Игра-кликер про Скибиди Габва, при достижении 1млрд очков, все участники игры получат мишку-подарок Telegram!</p>
         </div>
         <div id="third_info" class="sf third_info">
@@ -108,6 +108,15 @@
             <a class="close-button" id="closeModalBtn">Закрыть</a>
         </div>
     </div>
+    <div class="overlay" id="modalOverlay1">
+        <div class="modal">
+            <span class="subtitle">Скибиди габв</span>
+<!--             <p class="texts">У GradeCalc есть собственный сайт, страница в RuStore и канал.</p> -->
+            <a href="https://t.me/ScibidiGabovBot" target="_blank">Ссылка на бота</a><br>
+            <br>
+            <a class="close-button" id="closeModalBtn">Закрыть</a>
+        </div>
+    </div>
 </body>
 </html>
 <script src="https://telegram.org/js/telegram-web-app.js?58"></script>
@@ -120,16 +129,21 @@
     openModalBtn.addEventListener("click", function() {
         modalOverlay.style.display = "flex"; // Показываем оверлей
     });
+    openModalBtn1.addEventListener("click", function() {
+        modalOverlay1.style.display = "flex"; // Показываем оверлей
+    });
 
     // Функция для закрытия оверлея
     closeModalBtn.addEventListener("click", function() {
         modalOverlay.style.display = "none"; // Скрываем оверлей
+        modalOverlay1.style.display = "none"; // Скрываем оверлей
     });
 
     // Закрытие при клике вне модального окна
     window.addEventListener('click', function(event) {
-        if (event.target == modalOverlay) {
+        if (event.target == modalOverlay) or (event.target == modalOverlay1) {
             modalOverlay.style.display = "none";
+            modalOverlay1.style.display = "none";
         }
     });
 </script>
@@ -163,4 +177,5 @@
     document.oncontextmenu = noselect;
     function noselect() {return false;}
 </script>
+
 
