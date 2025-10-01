@@ -123,6 +123,7 @@ header img {
 }
 .first_info .svg_color {
     fill: var(--tg-theme-text-color);
+    stop-color: var(--tg-theme-text-color);
 }
 .first_info .svg_color_link {
     fill: var(--tg-theme-link-color);
@@ -326,6 +327,7 @@ p{
     transition: 0.1s;
     transform: translateY(2px);
 }
+
 
 
 
