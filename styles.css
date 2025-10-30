@@ -233,7 +233,7 @@ p{
     width: auto;
     height: 230px;
     background: var(--tg-theme-button-color);
-    border-radius: 30px;
+    border-radius: 20px;
     margin-bottom: 10px;
     display: grid;
     place-items: center;
@@ -334,6 +334,7 @@ p{
     transition: 0.1s;
     transform: translateY(2px);
 }
+
 
 
 
