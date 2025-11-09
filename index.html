@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,8 @@
         <header>
             <div class="item"><img src="files/img/myavatarka.jpg" alt="ава"><span class="header_text">Алексей Дроков</span></div>
             <p></p>
-            <div class="item"><a class="button huy" href="https://t.me/whyDrok">Мой профиль</a></div>
+            <div class="item"><a class="button huy" href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/whyDrok');">Мой профиль</a></div> 
+            <!-- href="https://t.me/whyDrok" -->
         </header>
         <div id="first_info" class="sf first_info">
             <div class="text">
@@ -37,7 +38,7 @@
                         <span class="texts">Канал про Telegram</span>
                     </div>
                     <div class="btn_grid">
-                        <a class="button sd" href="https://t.me/dronifs" target="_blank">Открыть</a>
+                        <a class="button sd" href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/dronifs');">Открыть</a>
                     </div>
 
                     <div class="icon_grid">
@@ -48,7 +49,7 @@
                         <span class="texts">Новости ботов</span>
                     </div>
                     <div class="btn_grid">
-                        <a class="button sd" href="https://t.me/Qjkey" target="_blank">Открыть</a>
+                        <a class="button sd" href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/Qjkey');">Открыть</a>
                     </div>
 
                     <div class="icon_grid">
@@ -59,7 +60,7 @@
                         <span class="texts">Мои личные эмодзи</span>
                     </div>
                     <div class="btn_grid">
-                        <a class="button sd" href="https://t.me/addemoji/GroAlexPixeI" target="_blank">Открыть</a>
+                        <a class="button sd" href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/addemoji/GroAlexPixeI');">Открыть</a>
                     </div>
                 </div>
             </div>
@@ -75,12 +76,12 @@
         </div>
         <div id="third_info" class="sf third_info">
             <div class="img_esc"><img src="files/img/фото Скибиди габва.png" alt="ава"></div>
-            <span class="subtitle">Скибиди габв  </span><a href="https://t.me/ScibidiGabovBot" class="btn" target="_blank">Открыть</a><br>
+            <span class="subtitle">Скибиди габв  </span><a href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/ScibidiGabovBot');" class="btn">Открыть</a><br>
             <p class="texts">Игра-кликер про Скибиди Габва, при достижении 1млрд очков, все участники игры получат мишку-подарок Telegram!</p>
         </div>
         <div id="third_info" class="sf third_info">
             <div class="img_esc"><img src="files/img/фото FontsStore.png" alt="ава"></div>
-            <span class="subtitle">GoogleSans  </span><a href="https://t.me/GoogleSansBot" class="btn" target="_blank">Открыть</a><br>
+            <span class="subtitle">GoogleSans  </span><a class="btn" href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/GoogleSansBot');">Открыть</a><br>
             <p class="texts">GoogleSans. Это простенький бот, для покупки моих любимых шрифтов. Сейчас там 90% скидки!</p>
         </div>
         <div id="third_info" class="sf third_info">
@@ -97,7 +98,7 @@
             <p class="texts">У GradeCalc есть собственный сайт, страница в RuStore и канал.</p>
             <a href="https://qjkey.github.io/GradeCalc/" target="_blank">Сайт GradeCalc</a><br>
             <a href="https://www.rustore.ru/catalog/app/appinventor.ai_alexeysgrokholskiy.GradeCalc_10" target="_blank">Скачать из RuStore</a><br>
-            <a href="https://t.me/GradeCalc" target="_blank">Канал GradeCalc</a><br>
+            <a href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/GradeCalc');">Канал GradeCalc</a><br>
             <br>
             <a class="close-button" id="closeModalBtn">Закрыть</a>
         </div>
@@ -157,6 +158,7 @@
     document.oncontextmenu = noselect;
     function noselect() {return false;}
 </script>
+
 
 
 
