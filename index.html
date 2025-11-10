@@ -136,7 +136,7 @@
         containers.forEach(container => {
             const containerTop = container.getBoundingClientRect().top;
 
-            if (containerTop < windowHeight * 0.7) {
+            if (containerTop < windowHeight * 0.9) {
             container.classList.add("visible");
             }
         });
@@ -155,3 +155,4 @@
     document.oncontextmenu = noselect;
     function noselect() {return false;}
 </script>
+
