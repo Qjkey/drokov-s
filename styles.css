@@ -64,11 +64,13 @@ body {
     text-decoration: none;
     border-radius: 100px;
     background-color: var(--tg-theme-button-color);
+    transition: scale 1s linear(0, 0.038 1.6%, 0.154 3.4%, 1.026 12.6%, 1.166 15.2%, 1.234 18%, 1.221 21.6%, 1.005 31.2%, 0.944 37%, 1.013 56%, 1);
     text-align: center;
 }
 .button:active {
-    transition: 0.2s;
-    transform: scaleX(70%);
+    transition-timing-function: ease-out;
+    transition-duration: 100ms;
+    scale: .90;
 }
 
 
@@ -285,10 +287,12 @@ p{
     background-color: var(--tg-theme-button-color);
     text-align: center;
     vertical-align: 2px;
+    transition: scale 1s linear(0, 0.038 1.6%, 0.154 3.4%, 1.026 12.6%, 1.166 15.2%, 1.234 18%, 1.221 21.6%, 1.005 31.2%, 0.944 37%, 1.013 56%, 1);
 }
 .btn:active {
-    transition: 0.2s;
-    transform: scaleX(70%);
+    transition-timing-function: ease-out;
+    transition-duration: 100ms;
+    scale: .90;
 }
 
 .overlay {
@@ -337,6 +341,7 @@ p{
     border-radius: 100px;
     background-color: var(--tg-theme-destructive-text-color);
     text-align: center;
+    transition: scale 1s linear(0, 0.038 1.6%, 0.154 3.4%, 1.026 12.6%, 1.166 15.2%, 1.234 18%, 1.221 21.6%, 1.005 31.2%, 0.944 37%, 1.013 56%, 1);
     vertical-align: 2px;
 }
 
@@ -363,8 +368,9 @@ p{
 }
 
 .modal .sbutton:active {
-    transition: 0.5s;
-    transform: scaleX(70%);
+    transition-timing-function: ease-out;
+    transition-duration: 100ms;
+    scale: .90;
 }
 
 .modal .first {
@@ -382,16 +388,7 @@ p{
 }
 
 .close-button:active {
-    transition: 0.2s;
-    transform: scaleX(70%);
+    transition-timing-function: ease-out;
+    transition-duration: 100ms;
+    scale: .90;
 }
-
-
-
-
-
-
-
-
-
-
