@@ -8,8 +8,146 @@
     <link rel="icon" href="files\img\favicon.ico" type="image/x-icon">
 </head>
 <body>
+
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="0"
+  height="0"
+  style="position: absolute; overflow: hidden;"
+>
+  <defs>
+    <filter
+      id="liquid-glass-filter"
+      x="0%"
+      y="0%"
+      width="100%"
+      height="100%"
+    >
+      <feTurbulence
+        type="fractalNoise"
+        baseFrequency="0.01 0.01"
+        numOctaves="2"
+        seed="92"
+        result="noise"
+      />
+      <feGaussianBlur in="noise" stdDeviation="2" result="blurred" />
+      <feDisplacementMap
+        in="SourceGraphic"
+        in2="blurred"
+        scale="60"
+        xChannelSelector="R"
+        yChannelSelector="G"
+      />
+    </filter>
+  </defs>
+</svg>
+<style>
+.liquid-glass {
+    position: fixed;
+  isolation: isolate;
+}
+.liquid-glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 0 15px 0px #ffffff57;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 0;
+}
+.liquid-glass::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  filter: url(#liquid-glass-filter);
+  -webkit-filter: url(#liquid-glass-filter);
+  isolation: isolate;
+  z-index: -1;
+}
+
+.liquid-glass-fallback {
+  position: relative;
+  isolation: isolate;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+@supports (backdrop-filter: url(#liquid-glass-filter)) {
+  .liquid-glass-auto {
+    position: relative;
+    isolation: isolate;
+  }
+  .liquid-glass-auto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    box-shadow: inset 0 0 20px 0px #ffffff;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 0;
+  }
+  .liquid-glass-auto::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    filter: url(#liquid-glass-filter);
+    -webkit-filter: url(#liquid-glass-filter);
+    isolation: isolate;
+    z-index: -1;
+  }
+}
+
+@supports not (backdrop-filter: url(#liquid-glass-filter)) {
+  .liquid-glass-auto {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+  }
+}
+</style>
+
+<script>
+(function() {
+  const userAgent = navigator.userAgent.toLowerCase();
+  const isChromium = userAgent.includes('chrome') || userAgent.includes('edg') || userAgent.includes('opr') || userAgent.includes('opera');
+  
+  if (!isChromium) {
+    document.documentElement.classList.add('no-liquid-glass-support');
+    const elements = document.querySelectorAll('.liquid-glass');
+    elements.forEach(el => {
+      el.classList.remove('liquid-glass');
+      el.classList.add('liquid-glass-fallback');
+    });
+  }
+})();
+</script>
+
+
     <div class="main">
-        <header>
+        <header class="liquid-glass">
             <div class="item"><img src="files/img/myavatarka.jpg" alt="ава"><span class="header_text">Алексей Дроков</span></div>
             <p></p>
             <div class="item"><a class="button huy" href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/whyDrok');">Мой профиль</a></div> 
@@ -27,7 +165,7 @@
         <div id="second_info" class="sf second_info">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="form" viewBox="0,0,325.64511,38.35306"><g transform="translate(-74.87138,-160.82532)"><g class="form_second_info" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10"><path d="M83.89989,197.6747c0,0 95.21435,-32.57706 198.25049,-35.29009c65.86657,-1.73433 113.94972,35.1625 113.94972,35.1625z"/></g></g></svg>
             <div class="color">
-                <span class="title">Мои ссылки</span>
+                <span class="text">Мои ссылки</span>
                 <div class="grid">
                     <div class="icon_grid">
                         <img src="files/img/1.png" alt="ава">
@@ -41,17 +179,6 @@
                     </div>
 
                     <div class="icon_grid">
-                        <img src="files/img/4.png" alt="ава">
-                    </div>
-                    <div class="item_grid">
-                        <span class="subtitle">Мои эмодзи</span><br>
-                        <span class="texts">Все мои эмодзи</span>
-                    </div>
-                    <div class="btn_grid">
-                        <a class="button sd" href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/Emoji_qbot?startapp=user_5380175061');">Профиль</a>
-                    </div>
-                    
-                    <div class="icon_grid">
                         <img src="files/img/5.png" alt="ава">
                     </div>
                     <div class="item_grid">
@@ -61,13 +188,24 @@
                     <div class="btn_grid">
                         <a class="button sd" href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/Qjkey');">Открыть</a>
                     </div>
+
+                    <div class="icon_grid">
+                        <img src="files/img/4.png" alt="ава">
+                    </div>
+                    <div class="item_grid">
+                        <span class="subtitle">Эмодзи</span><br>
+                        <span class="texts">Мои личные эмодзи</span>
+                    </div>
+                    <div class="btn_grid">
+                        <a class="button sd" href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/addemoji/GroAlexPixeI');">Открыть</a>
+                    </div>
                 </div>
             </div>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="form" viewBox="0,0,325.64511,38.35306"><g transform="translate(-79.48352,-160.82162)"><g class="form_second_info" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10"><path d="M83.8999,162.45291c0,0 48.08315,36.89683 113.94972,35.1625c103.03614,-2.71303 198.25049,-35.29009 198.25049,-35.29009z"/></g></g></svg>
         </div>
         <div id="third_info" class="sf third_info">
         <div class="title_box">
-            <span class="title">Мои проекты</span>
+            <span class="text">Мои проекты</span>
         </div>
             <div class="img_esc"><img src="files/img/фото GradeCalc.png" alt="ава"></div>
             <span class="subtitle">GradeCalc  </span><a id="openModalBtn" class="btn">Подробнее</a><br>
@@ -94,7 +232,7 @@
     <div class="overlay" id="modalOverlay">
         <div class="modal">
             <span class="title">GradeCalc  </span><a class="close-button" id="closeModalBtn">Закрыть</a>
-            <p class="text">У GradeCalc есть собственный сайт, страница в RuStore и канал.</p>
+            <p class="textss">У GradeCalc есть собственный сайт, страница в RuStore и канал.</p>
             <a class="sbutton first" href="https://qjkey.github.io/GradeCalc/" target="_blank">Сайт GradeCalc</a><br>
             <a class="sbutton pi" href="https://www.rustore.ru/catalog/app/appinventor.ai_alexeysgrokholskiy.GradeCalc_10" target="_blank">Скачать из RuStore</a><br>
             <a class="sbutton po" href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/GradeCalc');">Канал GradeCalc</a><br>
@@ -136,7 +274,7 @@
         containers.forEach(container => {
             const containerTop = container.getBoundingClientRect().top;
 
-            if (containerTop < windowHeight * 1.3) {
+            if (containerTop < windowHeight * 1) {
             container.classList.add("visible");
             }
         });
@@ -155,6 +293,3 @@
     document.oncontextmenu = noselect;
     function noselect() {return false;}
 </script>
-
-
-
