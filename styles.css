@@ -73,6 +73,17 @@ body {
     scale: .90;
 }
 
+@keyframes slideInFadeIn {
+    0% {
+        transform: translateY(50px); /* Начинает сбоку */
+    }
+    50% {
+        transform: translateY(-10px); /* Немного "перелетает" */
+    }
+    100% {
+        transform: translateY(0); /* Приходит в финальное положение */
+    }
+}
 
 /* ВЕРХУШКА */
 header {
@@ -84,6 +95,8 @@ header {
     width: auto; 
     display: grid;
     min-width: 100px;
+    transform: translateY(50px); /* Начальное положение для анимации */
+    animation: slideInFadeIn 0.5s ease-out forwards;
     grid-template-columns: auto auto 165px;
     grid-template-rows: 60px;
     /* backdrop-filter: blur(12px);
@@ -312,6 +325,8 @@ p{
 .modal {
     padding: 20px;
     border-radius: 30px;
+    transform: translateY(50px); /* Начальное положение для анимации */
+    animation: slideInFadeIn 0.5s ease-out forwards;
     width: 70%;
     max-width: 600px;
     text-align: center; /* Центрирование текста */
