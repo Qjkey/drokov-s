@@ -38,7 +38,11 @@ body {
     font-family: "PS";
     /* font-size: 20px; */
     margin: 0;
+    -ms-overflow-style: none;
 }
+
+html { scrollbar-width: none; } 
+body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; }
 .main {
     max-width: 500px;
     /* width: auto; */
@@ -398,3 +402,4 @@ p{
     transition-duration: 100ms;
     scale: .90;
 }
+
