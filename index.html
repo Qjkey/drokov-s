@@ -185,10 +185,10 @@
                     </div>
                     <div class="item_grid">
                         <span class="subtitle">Эмодзи</span><br>
-                        <span class="texts">Профиль в эмодзи</span>
+                        <span class="texts">Мои эмодзи-паки</span>
                     </div>
                     <div class="btn_grid">
-                        <a class="button sd" href="https://t.me/Emoji_qbot?startapp=user_5380175061">Профиль</a>
+                        <a class="button sd" id="openModalBtn1">Эмодзи</a>
                     </div>
 
                     <div class="icon_grid">
@@ -223,11 +223,11 @@
             <span class="subtitle">GoogleSans  </span><a class="btn" href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/GoogleSansBot');">Открыть</a><br>
             <p class="texts">GoogleSans. Это простенький бот, для покупки моих любимых шрифтов. Сейчас там 90% скидки!</p>
         </div>
-        <div id="third_info" class="sf third_info">
+        <!-- <div id="third_info" class="sf third_info">
             <div class="img_esc"><img src="files/img/фото EmojiBot.png" alt="ава"></div>
             <span class="subtitle">EmojiBot</span><br>
             <p class="texts">Этот проект в разработке, но вскоре выйдет на свет...</p>
-        </div>
+        </div> -->
     </div>
     <br>
     <br>
@@ -238,6 +238,22 @@
             <a class="sbutton first" href="https://qjkey.github.io/GradeCalc/" target="_blank">Сайт GradeCalc</a><br>
             <a class="sbutton pi" href="https://www.rustore.ru/catalog/app/appinventor.ai_alexeysgrokholskiy.GradeCalc_10" target="_blank">Скачать из RuStore</a><br>
             <a class="sbutton po" href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/GradeCalc');">Канал GradeCalc</a><br>
+        </div>
+    </div>
+    <div class="overlay" id="modalOverlay1">
+        <div class="modal liquid-glass">
+            <span class="title">Мои эмодзи  </span><a class="close-button" id="closeModalBtn1">Закрыть</a>
+            <p class="textss">За своё существование в Telegram, я сделал множество эмодзи-паков:</p>
+            <a class="sbutton first" href="https://t.me/addemoji/inscription_drok">Надписи</a><br>
+            <a class="sbutton pi" href="https://t.me/addemoji/FinFonia">ФинФония</a><br>
+            <a class="sbutton pi" href="https://t.me/addemoji/MinecraftToday">Minecraft</a><br>
+            <a class="sbutton pi" href="https://t.me/addemoji/InBuild_emoji">InBuild</a><br>
+            <a class="sbutton pi" href="https://t.me/addemoji/GroAlexPixeI">whyDrok's</a><br>
+            <a class="sbutton pi" href="https://t.me/addemoji/GradeCalcEmoji">GradeCalc's</a><br>
+            <a class="sbutton pi" href="https://t.me/addemoji/SkyTureEmojidrok">SkyTure's</a><br>
+            <a class="sbutton pi" href="https://t.me/addemoji/AmongUsDrok">AmongUs</a><br>
+            <a class="sbutton pi" href="https://t.me/addemoji/EmojiBotIcon">Qjkey</a><br>
+            <a class="sbutton po" href="https://t.me/addemoji/OfficeNewLogos">New Office</a><br>
         </div>
     </div>
 </body>
@@ -262,6 +278,28 @@
     window.addEventListener('click', function(event) {
         if (event.target == modalOverlay) {
             modalOverlay.style.display = "none";
+        }
+    });
+</script>
+<script>
+    const openModalBtn1 = document.getElementById("openModalBtn1");
+    const closeModalBtn1 = document.getElementById("closeModalBtn1");
+    const modalOverlay1 = document.getElementById("modalOverlay1");
+
+    // Функция для открытия оверлея
+    openModalBtn1.addEventListener("click", function() {
+        modalOverlay1.style.display = "flex"; // Показываем оверлей
+    });
+
+    // Функция для закрытия оверлея
+    closeModalBtn1.addEventListener("click", function() {
+        modalOverlay1.style.display = "none"; // Скрываем оверлей
+    });
+
+    // Закрытие при клике вне модального окна
+    window.addEventListener('click', function(event) {
+        if (event.target == modalOverlay1) {
+            modalOverlay1.style.display = "none";
         }
     });
 </script>
