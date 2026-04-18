@@ -205,7 +205,12 @@
         </div>
             <div class="img_esc"><img src="files/img/фото GradeCalc.png" alt="ава"></div>
             <span class="subtitle">GradeCalc  </span><a id="openModalBtn" class="btn">Подробнее</a><br>
-            <p class="texts">Калькулятор оценок, для получения среднего балла исходя из какого-то определённого количества оценок.</p>
+            <p class="texts">Калькулятор оценок, для получения среднего балла исходя из какого-то определённого количества оценок</p>
+        </div>
+        </div>
+            <div class="img_esc"><img src="files/img/фото TMA ui kit.png" alt="ава"></div>
+            <span class="subtitle">TMA ui kit  </span><a id="openModalBtn2" class="btn">Подробнее</a><br>
+            <p class="texts">Telegram Mini Apps UI kit — набор элементов интерфейса для построения мини-приложений Telegram</p>
         </div>
     </div>
     <br>
@@ -236,6 +241,15 @@
             <a class="sbutton po" href="https://t.me/addemoji/InBuild_emoji">InBuild's</a><br>
             <a class="sbutton po" href="https://t.me/addemoji/RusseRouletteBot">Русская рулетка</a><br>
             <a class="sbutton po" href="https://t.me/addemoji/bs_drok">БС страны</a><br>
+        </div>
+    </div>
+    <div class="overlay" id="modalOverlay2">
+        <div class="modal liquid-glass">
+            <span class="title">TMA ui kit  </span><a class="close-button" id="closeModalBtn2">Закрыть</a>
+            <p class="textss">У GradeCalc есть собственный сайт, страница в RuStore и канал</p>
+            <a class="sbutton first" href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/Qjkey/10');" target="_blank">TMA ui kit 1.0</a><br>
+            <a class="sbutton pi" href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/Qjkey/19');" target="_blank">TMA ui kit 2.0</a><br>
+            <a class="sbutton po" href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/Qjkey/25');">TMA ui kit 2.1</a><br>
         </div>
     </div>
 </body>
@@ -271,6 +285,23 @@
     window.addEventListener('click', function(event) {
         if (event.target == modalOverlay1) {
             modalOverlay1.style.display = "none";
+        }
+    });
+</script>
+<script>
+    const openModalBtn1 = document.getElementById("openModalBtn2");
+    const closeModalBtn1 = document.getElementById("closeModalBtn2");
+    const modalOverlay1 = document.getElementById("modalOverlay2");
+
+    openModalBtn2.addEventListener("click", function() {
+        modalOverlay2.style.display = "flex";
+    });
+    closeModalBtn2.addEventListener("click", function() {
+        modalOverlay2.style.display = "none";
+    });
+    window.addEventListener('click', function(event) {
+        if (event.target == modalOverlay2) {
+            modalOverlay2.style.display = "none";
         }
     });
 </script>
