@@ -35,11 +35,11 @@
 /* БАЗА */
 body {
     justify-content: center;
+    overflow-y: auto;
     align-items: center;
     background-color: var(--tg-theme-bg-color);
     color: var(--tg-theme-text-color);
     font-family: "PS";
-    /* font-size: 20px; */
     margin: 0;
     -ms-overflow-style: none;
 }
