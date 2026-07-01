@@ -47,11 +47,7 @@ body {
 html { scrollbar-width: none; } 
 body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; }
 .main {
-    width: 100%;
     max-width: 500px;
-    height: 100dvh;
-    box-sizing: border-box;
-    overflow-y: auto;
     margin: auto;
 }
 
